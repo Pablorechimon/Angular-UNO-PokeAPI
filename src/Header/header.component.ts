@@ -1,8 +1,11 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class Header {}
+export class Header {
+  @Input()
+  tituloHeader: string;
+}

@@ -1,11 +1,17 @@
 <!-- Pokemon Grid -->
 <div class="pokemon-grid">
-  <div class="box" *ngFor="let pokemon of pokemons">
-    <img
+  <div *ngIf="showTable">
+    <div class="box" *ngFor="let pokemon of pokemons">
+      <img
       src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon.id}}.png"
       alt="Pokemon"
+      (click)="showPokemon(pokemon.id)"
     />
-    <h3>{{pokemon.name}}</h3>
+      <h3>{{pokemon.name}}</h3>
+    </div>
+  </div>
+  <div *ngIf="!showTable">
+    <p>{{id}}</p>
   </div>
 </div>
 <!-- End Pokemon Grid -->

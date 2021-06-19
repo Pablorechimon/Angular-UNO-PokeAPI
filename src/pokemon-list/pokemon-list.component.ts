@@ -8,6 +8,8 @@ import { DataService } from '../Services/data.service';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
+  showTable: boolean = true;
+  id: number = 0;
 
   constructor(private dataService: DataService) {}
 
@@ -22,5 +24,11 @@ export class PokemonListComponent implements OnInit {
           });
       });
     });
+  }
+
+  showPokemon(id: number) {
+    console.log(id);
+    this.showTable = false;
+    this.id = id;
   }
 }
