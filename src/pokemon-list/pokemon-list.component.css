@@ -25,10 +25,11 @@
 .pokeimage {
   margin-left: 30%;
   margin-right: 30%;
+  margin: 20 20 20 20;
 }
 
 .pokeimage:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  /**/
 }
 
 .back {
