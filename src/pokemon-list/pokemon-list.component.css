@@ -4,7 +4,6 @@
   display: grid;
   grid-gap: 16px;
   padding: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
 }
 .pokemon-grid .box {
   width: 100%;
@@ -21,4 +20,18 @@
 
 .pokemon-grid .box h3 {
   color: black;
+}
+
+.pokeimage {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.pokeimage:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.back {
+  background-color: gold;
+  font-size: 25px;
 }

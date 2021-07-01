@@ -12,6 +12,10 @@
   </div>
   <div *ngIf="!showTable">
     <p>{{id}}</p>
+    <img class="pokeimage"
+      src="https://pokeres.bastionbot.org/images/pokemon/{{id}}.png"
+      alt="Pokemon">
+    <button class="back" (click)="showTable=true">Volver</button>
   </div>
 </div>
 <!-- End Pokemon Grid -->
