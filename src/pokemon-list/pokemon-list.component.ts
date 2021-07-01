@@ -10,6 +10,7 @@ export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
   showTable: boolean = true;
   id: number = 0;
+  name: string = '';
 
   constructor(private dataService: DataService) {}
 
@@ -26,9 +27,9 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  showPokemon(id: number) {
-    console.log(id);
+  showPokemon(id: number, name: string) {
     this.showTable = false;
     this.id = id;
+    this.name = name;
   }
 }

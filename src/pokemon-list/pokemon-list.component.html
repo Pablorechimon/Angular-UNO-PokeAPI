@@ -1,19 +1,22 @@
 <!-- Pokemon Grid -->
 <div class="pokemon-grid">
-  <div *ngIf="showTable">
+  <div *ngIf="showTable" class="si">
     <div class="box" *ngFor="let pokemon of pokemons">
       <img
+      class="pokeimages"
       src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon.id}}.png"
       alt="Pokemon"
-      (click)="showPokemon(pokemon.id)"
+      (click)="showPokemon(pokemon.id, pokemon.name)"
     />
       <h3>{{pokemon.name}}</h3>
     </div>
   </div>
   <div *ngIf="!showTable">
+    <h1>{{name}}</h1>
     <img class="pokeimage"
       src="https://pokeres.bastionbot.org/images/pokemon/{{id}}.png"
       alt="Pokemon">
+    <br>
     <button class="back" (click)="showTable=true">Volver</button>
   </div>
 </div>
